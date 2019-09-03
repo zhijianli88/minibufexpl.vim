@@ -2464,4 +2464,18 @@ endfunction
 
 " }}}
 
+if !exists('g:miniBufExplMapWindowNavArrows')
+  let g:miniBufExplMapWindowNavArrows = 0
+endif
+"
+" If we have enabled control + arrow key remapping
+" then perform the remapping
+"
+if g:miniBufExplMapWindowNavArrows
+  noremap <C-Down>  <C-W>j
+  noremap <C-Up>    <C-W>k
+  noremap <C-Left>  <C-W>h
+  noremap <C-Right> <C-W>l
+endif
+
 " vim:ft=vim:fdm=marker:ff=unix:nowrap:tabstop=2:shiftwidth=2:softtabstop=2:smarttab:shiftround:expandtab
